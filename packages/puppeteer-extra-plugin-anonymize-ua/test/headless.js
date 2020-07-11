@@ -32,7 +32,7 @@ test('will remove headless from the user-agent in incognito page', async (t) => 
 
   const browser = await puppeteer.launch({ args: PUPPETEER_ARGS })
 
-  // Requires puppeteer@next currrently
+  // Requires puppeteer@next currently
   if (browser.createIncognitoBrowserContext) {
     const context = await browser.createIncognitoBrowserContext()
     const page = await context.newPage()
